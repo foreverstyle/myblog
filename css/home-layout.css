@@ -1,0 +1,279 @@
+body {
+    background: #171408;
+}
+
+#main {
+    box-sizing: border-box;
+    display: grid;
+    gap: 34px;
+    grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
+    margin: 0 auto;
+    max-width: 1260px;
+    min-height: 100vh;
+    padding: 112px 28px 40px;
+}
+
+#home-head {
+    border: 1px solid #3d381e;
+    border-radius: 18px;
+    box-shadow: 0 18px 44px #05040280;
+    box-sizing: border-box;
+    display: block;
+    height: calc(100vh - 152px);
+    min-height: 640px;
+    overflow: hidden;
+    position: sticky;
+    top: 82px;
+    width: 100%;
+}
+
+#home-head #home-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    transform: scale(1.01);
+    width: 100%;
+    z-index: 0;
+}
+
+#home-head::after {
+    background: linear-gradient(180deg, #17140822 0%, #171408cc 66%, #171408f2 100%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+#home-head #home-info {
+    bottom: 0;
+    box-sizing: border-box;
+    color: #f6edcf;
+    height: auto;
+    left: 0;
+    margin: 0;
+    padding: 34px;
+    position: absolute;
+    right: 0;
+    width: auto;
+    z-index: 2;
+}
+
+#home-head #home-info .loop {
+    display: none;
+}
+
+#home-head #home-info .info {
+    background: transparent;
+    border-radius: 0;
+    display: block;
+    height: auto;
+    text-align: left;
+    width: auto;
+}
+
+#home-head #home-info .info .wrap {
+    padding: 0;
+}
+
+#home-head #home-info .info .wrap h1 {
+    color: #f6edcf;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+#home-head #home-info .info .wrap h3 {
+    color: #83d6ce;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+
+#home-head #home-info .info .wrap h5 {
+    color: #d7cfb6;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+#home-posts-wrap {
+    align-items: start;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    margin: 0;
+    padding: 0;
+}
+
+#home-posts {
+    margin: 0;
+    width: auto;
+}
+
+#home-posts::before {
+    color: #aaa08a;
+    content: "Latest\A最近更新\A这里会慢慢收集博客、音乐、游戏、书籍和其他想留下来的瞬间。";
+    display: block;
+    line-height: 1.7;
+    margin: 4px 0 24px;
+    white-space: pre-line;
+}
+
+#home-posts .post {
+    background: #1d1a0b;
+    border: 1px solid #3d381e;
+    border-left: 4px solid #5fa8a2;
+    border-radius: 12px;
+    box-shadow: none;
+    margin-bottom: 24px;
+    overflow: hidden;
+    padding: 34px 24px;
+}
+
+#home-posts .post:hover {
+    border-color: #5fa8a2;
+    box-shadow: 0 12px 28px #07060280;
+    transform: translateY(-2px);
+}
+
+#home-posts .post-title {
+    color: #83d6ce;
+    font-size: 26px;
+    line-height: 1.35;
+    margin: 0;
+    text-align: left;
+}
+
+#home-posts .post .category-and-date {
+    color: #a9a086;
+    text-align: left;
+}
+
+#home-posts .post .description {
+    color: #bcb39b;
+    line-height: 1.8;
+}
+
+#home-posts .post .go-post {
+    background: #2a210b;
+    border: 1px solid #66572a;
+    border-radius: 8px;
+    box-shadow: none;
+    color: #d8cda9;
+    right: 18px;
+}
+
+#home-posts .post .go-post:hover {
+    box-shadow: none;
+    right: 18px;
+}
+
+#home-card {
+    width: auto;
+}
+
+#home-card #card-style {
+    background: #1d1a0b;
+    border: 1px solid #3d381e;
+    border-radius: 12px;
+    box-shadow: none;
+    color: #d8cda9;
+    max-height: none;
+    top: 82px;
+    width: 100%;
+}
+
+#home-card #card-div {
+    padding: 28px 0;
+}
+
+#home-card #card-div .avatar {
+    border-color: #5fa8a2;
+    height: 118px;
+    width: 118px;
+}
+
+#home-card #card-div .name {
+    color: #83d6ce;
+    font-size: 18px;
+}
+
+#home-card #card-div .description {
+    color: #bcb39b;
+    line-height: 1.8;
+    text-align: left;
+}
+
+#home-card #card-div .icon-links {
+    border-top-color: #3d381e;
+}
+
+#home-card #card-div .icon-links a {
+    color: #d8cda9;
+}
+
+#home-card #card-div .icon-links a:hover,
+#home-posts .page-current .page-num:hover {
+    background: #193229;
+    color: #83d6ce;
+}
+
+#footer {
+    grid-column: 1 / -1;
+    margin-top: 80px;
+}
+
+#footer #footer-wrap {
+    border-top-color: #3a3115;
+    color: #8f856c;
+}
+
+@media (max-width: 980px) {
+    #main {
+        display: block;
+        padding: 82px 18px 30px;
+    }
+
+    #home-head {
+        height: 62vh;
+        min-height: 460px;
+        position: relative;
+        top: auto;
+    }
+
+    #home-posts-wrap {
+        display: block;
+        margin-top: 28px;
+    }
+
+    #home-card {
+        display: block;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 620px) {
+    #home-head {
+        height: 72vh;
+        min-height: 500px;
+    }
+
+    #home-head #home-info {
+        padding: 24px;
+    }
+
+    #home-head #home-info .info .wrap h1 {
+        font-size: 30px;
+    }
+
+    #home-posts .post {
+        padding: 24px 18px 56px;
+    }
+
+    #home-posts .post-title {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,46 @@
+#menu {
+    background: #2a210b;
+    border-bottom: 1px solid #3a3115;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+#menu #desktop-menu {
+    display: flex;
+    gap: 8px;
+    padding: 0 14px;
+}
+
+#menu #desktop-menu .title {
+    display: none;
+}
+
+#menu #desktop-menu a {
+    color: #cfc4aa;
+    padding: 0 10px;
+}
+
+#menu #desktop-menu a:nth-of-type(2),
+#menu #desktop-menu a:hover {
+    background: #193229;
+    border-radius: 999px;
+    color: #83d6ce;
+}
+
+#menu #desktop-menu a i {
+    display: none;
+}
+
+#menu #mobile-menu .title {
+    background: #2a210b;
+    color: #cfc4aa;
+}
+
+#menu #mobile-menu .items {
+    background: #1d1a0b;
+    border-bottom: 1px solid #3a3115;
+}
+
+#menu #mobile-menu .items a {
+    color: #cfc4aa;
+}

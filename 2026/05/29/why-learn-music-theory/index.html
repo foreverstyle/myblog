@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>为何学习乐理？乐理之于听感 | Style丶深情</title>
+    <meta name="author" content="Style丶深情" />
+    <meta name="description" content="在这里写代码、生活、灵感和一些想留下来的瞬间。" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/myblog/images/profile-avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/myblog/js/lib/highlight.js"></script>
+
+
+
+<script src="/myblog/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/myblog/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/myblog/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/myblog/">
+            <span>STYLE丶深情</span>
+        </a>
+        
+        <a href="/myblog/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/myblog/archives">
+            <i class="fa-solid fa-rss fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/myblog/music">
+            <i class="fa-solid fa-music fa-fw"></i>
+            <span>&ensp;音乐</span>
+        </a>
+        
+        <a href="/myblog/games">
+            <i class="fa-solid fa-gamepad fa-fw"></i>
+            <span>&ensp;游戏</span>
+        </a>
+        
+        <a href="/myblog/books">
+            <i class="fa-solid fa-book fa-fw"></i>
+            <span>&ensp;书籍</span>
+        </a>
+        
+        <a href="/myblog/other">
+            <i class="fa-solid fa-toolbox fa-fw"></i>
+            <span>&ensp;其他</span>
+        </a>
+        
+        <a href="mailto:foreverstyle66@gmail.com">
+            <i class="fa-solid fa-envelope fa-fw"></i>
+            <span>&ensp;联系</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;STYLE丶深情</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/myblog/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-rss fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog/music">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-music fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">音乐</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog/games">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-gamepad fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">游戏</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog/books">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-book fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">书籍</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog/other">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-toolbox fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">其他</div>
+                    </div>
+                </a>
+                
+                <a href="mailto:foreverstyle66@gmail.com">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-envelope fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">联系</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>为何学习乐理？乐理之于听感</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/5/29
+        </span>
+        
+        <span class="category">
+            <a href="/myblog/categories/%E9%9F%B3%E4%B9%90/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                音乐
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/myblog/tags/%E4%B9%90%E7%90%86/" style="color: #00bcd4">
+                    乐理
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog/tags/%E5%90%AC%E6%84%9F/" style="color: #03a9f4">
+                    听感
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog/tags/%E9%9F%B3%E4%B9%90%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">
+                    音乐学习
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>很多人刚开始接触乐理时，会有一种隐隐的抵触：音乐不是用来听、用来感受的吗？如果把和弦、调式、级数、节奏型这些词全都摆上桌面，会不会把原本鲜活的东西拆成一堆冷冰冰的零件？</p>
+<p>我以前也这样想过。后来慢慢发现，乐理并不是为了替代听感，而是为了给听感一套更清晰的坐标。它不是把音乐变得无趣，恰恰相反，它让那些“我觉得这里很好听”“这里突然亮了一下”“这里像是松了一口气”的瞬间，变得更容易被理解、复现和表达。</p>
+<span id="more"></span>
+
+<h2 id="听感先于概念"><a href="#听感先于概念" class="headerlink" title="听感先于概念"></a>听感先于概念</h2><p>学习乐理最容易踩的坑，是把概念放在感受前面。比如一上来就背大调音阶、自然小调、属七和弦、二五一进行，却没有先把它们听进耳朵里。这样学到的知识很容易变成纸面上的知识：看题能认，听歌时却用不上。</p>
+<p>真正有用的顺序也许应该反过来：先听到差异，再用乐理命名它。</p>
+<p>比如你听到一首歌副歌突然变得开阔，可能是旋律音区抬高了，和声从小调色彩转向了更明亮的和弦，也可能是节奏密度、配器层次一起打开了。乐理在这里做的事情，不是告诉你“你应该感动”，而是帮你看清楚：你为什么会被这一刻推了一下。</p>
+<h2 id="乐理是听觉的放大镜"><a href="#乐理是听觉的放大镜" class="headerlink" title="乐理是听觉的放大镜"></a>乐理是听觉的放大镜</h2><p>听感有时候是模糊的。我们能感觉一段旋律“紧张”，却不一定知道紧张来自哪里；能感觉一个和弦“温柔”，却说不清它和普通三和弦有什么不同。乐理像一枚放大镜，让这些模糊的判断慢慢变得可观察。</p>
+<p>当你知道导音倾向于解决到主音，再去听很多旋律的收束，会发现那种“终于落地”的感觉不是凭空来的。当你知道属和弦天然带着回到主和弦的冲动，再听流行歌里常见的终止式，会更容易捕捉到音乐里的呼吸。你甚至会发现，一些作品好听的地方，正是因为它故意没有马上解决，而是把期待悬在那里。</p>
+<p>这种理解不会削弱听歌的快乐。它更像是原本只能看见水面波纹，现在也能隐约看见水流方向。</p>
+<h2 id="乐理让审美更可交流"><a href="#乐理让审美更可交流" class="headerlink" title="乐理让审美更可交流"></a>乐理让审美更可交流</h2><p>“好听”当然是重要的判断，但它太宽了。两个人都说好听，可能一个喜欢旋律线，一个喜欢鼓组律动，一个喜欢和声色彩，一个只是被歌词击中了。乐理提供了一些可以交流的词，让我们更准确地描述审美。</p>
+<p>比如：</p>
+<ul>
+<li>这段不是单纯“高级”，而是用了借用和弦，让明暗关系短暂偏离了原来的调性。</li>
+<li>这里不是“突然燃起来”，而是节奏切分和鼓点重音改变了身体的预期。</li>
+<li>这个旋律不是“很抓耳”这么简单，它可能在重复动机的同时做了小幅变化，所以既熟悉又不无聊。</li>
+</ul>
+<p>这些说法不是为了显得专业，而是为了把感受说得更具体。说得具体以后，才更容易继续讨论，也更容易在创作或练习里主动使用。</p>
+<h2 id="乐理不该变成审美的牢笼"><a href="#乐理不该变成审美的牢笼" class="headerlink" title="乐理不该变成审美的牢笼"></a>乐理不该变成审美的牢笼</h2><p>不过，乐理也有危险的一面：学了一些规则之后，人很容易开始用规则替代耳朵。看到不符合传统功能和声的地方，就急着判断“不规范”；听到简单的四和弦循环，就急着说“没技术含量”。这其实是把工具拿反了。</p>
+<p>乐理是总结，不是法律。它来自大量音乐实践的归纳，而不是从天而降的标准答案。不同风格有不同的语言：古典、爵士、摇滚、电子、民谣、说唱，它们对和声、音色、节奏、重复、噪声的理解都不一样。用一种体系去审判所有音乐，很容易听得越来越窄。</p>
+<p>更好的状态是：知道规则，也知道规则服务于什么；能分析，也愿意承认“这里就是凭直觉很好”。音乐里总要给不可解释的部分留一点位置。</p>
+<h2 id="从听歌开始学乐理"><a href="#从听歌开始学乐理" class="headerlink" title="从听歌开始学乐理"></a>从听歌开始学乐理</h2><p>如果要把乐理真正变成听感的一部分，我觉得可以从几个很小的练习开始：</p>
+<ol>
+<li>听一首熟悉的歌，标出你觉得情绪变化最明显的三个瞬间。</li>
+<li>回到这些瞬间，分别注意旋律、和声、节奏、配器有没有变化。</li>
+<li>遇到说不清的地方，再去查对应概念，而不是先背一整章理论。</li>
+<li>试着用自己的话描述：“这里让我感觉不稳定，因为……”</li>
+<li>如果会乐器，就把同一段换一个和弦、换一个节奏型，听听情绪如何变化。</li>
+</ol>
+<p>这个过程慢，但很扎实。因为你不是在积累抽象术语，而是在给自己的耳朵建立索引。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>学习乐理，不是为了把音乐听成公式，而是为了更敏锐地听见音乐如何发生。听感让我们先被音乐打动，乐理让我们回头看见那份打动的结构。</p>
+<p>它们不是对立的。好的乐理学习，最终应该让耳朵更自由，而不是更拘束。我们学会命名，不是为了停止感受，而是为了在下一次被某个和弦、某条旋律、某个节奏击中的时候，能更清楚地说：我听见了什么。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 Style丶深情
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Style丶深情
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/myblog/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

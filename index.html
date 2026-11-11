@@ -1,17 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo</title>
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
+    <title>Style丶深情</title>
+    <meta name="author" content="Style丶深情" />
+    <meta name="description" content="在这里写代码、生活、灵感和一些想留下来的瞬间。" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="icon" href="/myblog/images/profile-avatar.jpg" />
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -32,19 +32,19 @@
     rel="stylesheet"
     href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
 />
-<script src="/js/lib/highlight.js"></script>
+<script src="/myblog/js/lib/highlight.js"></script>
 
 
 
-<script src="/js/lib/preview.js"></script>
+<script src="/myblog/js/lib/preview.js"></script>
 
 
 
 
 
-<script src="/js/lib/home.js"></script>
+<script src="/myblog/js/lib/home.js"></script>
 
-<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/myblog/css/main.css" />
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
@@ -54,92 +54,120 @@
                 <div id="loading-circle">
                     <h2>LOADING</h2>
                     <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/images/loading.gif" />
+                    <img src="/myblog/images/loading.gif" />
                 </div>
             </div>
         </transition>
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
-        <a class="title" href="/">
-            <span>HEXO</span>
+        <a class="title" href="/myblog/">
+            <span>STYLE丶深情</span>
         </a>
         
-        <a href="/">
+        <a href="/myblog/">
             <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
+            <span>&ensp;首页</span>
         </a>
         
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
+        <a href="/myblog/archives">
+            <i class="fa-solid fa-rss fa-fw"></i>
+            <span>&ensp;归档</span>
         </a>
         
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
+        <a href="/myblog/music">
+            <i class="fa-solid fa-music fa-fw"></i>
+            <span>&ensp;音乐</span>
         </a>
         
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
+        <a href="/myblog/games">
+            <i class="fa-solid fa-gamepad fa-fw"></i>
+            <span>&ensp;游戏</span>
         </a>
         
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
+        <a href="/myblog/books">
+            <i class="fa-solid fa-book fa-fw"></i>
+            <span>&ensp;书籍</span>
+        </a>
+        
+        <a href="/myblog/other">
+            <i class="fa-solid fa-toolbox fa-fw"></i>
+            <span>&ensp;其他</span>
+        </a>
+        
+        <a href="mailto:foreverstyle66@gmail.com">
+            <i class="fa-solid fa-envelope fa-fw"></i>
+            <span>&ensp;联系</span>
         </a>
         
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;HEXO</span>
+            <span>&emsp;STYLE丶深情</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
                 
-                <a href="/">
+                <a href="/myblog/">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
                     </div>
                 </a>
                 
-                <a href="/about">
+                <a href="/myblog/archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-id-card fa-fw"></i>
+                            <i class="fa-solid fa-rss fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
                     </div>
                 </a>
                 
-                <a href="/archives">
+                <a href="/myblog/music">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                            <i class="fa-solid fa-music fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">音乐</div>
                     </div>
                 </a>
                 
-                <a href="/categories">
+                <a href="/myblog/games">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                            <i class="fa-solid fa-gamepad fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">游戏</div>
                     </div>
                 </a>
                 
-                <a href="/tags">
+                <a href="/myblog/books">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-tags fa-fw"></i>
+                            <i class="fa-solid fa-book fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">书籍</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog/other">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-toolbox fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">其他</div>
+                    </div>
+                </a>
+                
+                <a href="mailto:foreverstyle66@gmail.com">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-envelope fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">联系</div>
                     </div>
                 </a>
                 
@@ -156,7 +184,7 @@
     <div
         id="home-background"
         ref="homeBackground"
-        data-images="/images/background.jpg"
+        data-images="/myblog/images/background.jpg"
     ></div>
     <div id="home-info" @click="homeClick">
         <span class="loop"></span>
@@ -165,9 +193,9 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>Hexo</h1>
-                <h3></h3>
-                <h5></h5>
+                <h1>Style丶深情</h1>
+                <h3>记录热爱与日常</h3>
+                <h5>在这里写代码、生活、灵感和一些想留下来的瞬间。</h5>
             </div>
         </span>
     </div>
@@ -181,8 +209,8 @@
         
 
 <div class="post">
-    <a href="/2025/03/03/hello-world/">
-        <h2 class="post-title">Hello World</h2>
+    <a href="/myblog/2025/03/03/hello-world/">
+        <h2 class="post-title">写在第一页</h2>
     </a>
     <div class="category-and-date">
         
@@ -194,24 +222,16 @@
         </span>
         
         
+        <span class="special">
+            <i class="fa-solid fa-grip-vertical fa-fw"></i>
+        </span>
+        
     </div>
     <div class="description">
         <div class="content" v-pre>
             
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="language-bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+            <p>你好，我是 Style丶深情。欢迎来这里坐坐。</p>
+<p>有时候听歌，会把进度条往回拖几秒，想弄明白刚才那一段为什么好听。写代码时也有类似的瞬间：一个问题终于想通了，就想趁着还记得，把思路写下来。这些片段，就是我想留在这个博客里的东西。</p>
             
         </div>
     </div>
@@ -220,7 +240,125 @@
         
         
     </div>
-    <a href="/2025/03/03/hello-world/" class="go-post">阅读全文</a>
+    <a href="/myblog/2025/03/03/hello-world/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/myblog/2026/05/29/how-to-learn-and-think-in-the-age-of-ai/">
+        <h2 class="post-title">AI当道下应该如何学习和思考</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/myblog/categories/%E6%80%9D%E8%80%83/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                思考
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>AI 变得越来越强以后，很多学习上的问题都被重新摆到了桌面上：既然它能解释概念、生成代码、总结文章、写提纲、改文案，那我们还需要学什么？如果答案随手可得，人的思考会不会变得越来越懒？</p>
+<p>我觉得这个问题不能简单地回答“要用”或“不要用”。更关键的是：我们要重新区分，什么是可以交给工具加速的，什么是必须留在自己身上的。</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/myblog/tags/AI/" style="color: #ff7d73">AI</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/myblog/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="color: #ffa2c4">学习方法</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/myblog/tags/%E6%80%9D%E8%80%83/" style="color: #00bcd4">思考</a>
+        </span>
+        
+    </div>
+    <a href="/myblog/2026/05/29/how-to-learn-and-think-in-the-age-of-ai/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/myblog/2026/05/29/why-learn-music-theory/">
+        <h2 class="post-title">为何学习乐理？乐理之于听感</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/myblog/categories/%E9%9F%B3%E4%B9%90/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                音乐
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>很多人刚开始接触乐理时，会有一种隐隐的抵触：音乐不是用来听、用来感受的吗？如果把和弦、调式、级数、节奏型这些词全都摆上桌面，会不会把原本鲜活的东西拆成一堆冷冰冰的零件？</p>
+<p>我以前也这样想过。后来慢慢发现，乐理并不是为了替代听感，而是为了给听感一套更清晰的坐标。它不是把音乐变得无趣，恰恰相反，它让那些“我觉得这里很好听”“这里突然亮了一下”“这里像是松了一口气”的瞬间，变得更容易被理解、复现和表达。</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/myblog/tags/%E4%B9%90%E7%90%86/" style="color: #03a9f4">乐理</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/myblog/tags/%E5%90%AC%E6%84%9F/" style="color: #00a596">听感</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/myblog/tags/%E9%9F%B3%E4%B9%90%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">音乐学习</a>
+        </span>
+        
+    </div>
+    <a href="/myblog/2026/05/29/why-learn-music-theory/" class="go-post">阅读全文</a>
 </div>
 
 
@@ -239,22 +377,34 @@
         <div id="card-style">
     <div id="card-div">
         <div class="avatar">
-            <img src="/images/avatar.jpg" alt="avatar" />
+            <img src="/myblog/images/profile-avatar.jpg" alt="avatar" />
         </div>
-        <div class="name">John Doe</div>
+        <div class="name">Style丶深情</div>
         <div class="description">
-            <p>Description<br>…</p>
+            <p>写一点代码，也记录一点生活。<br>这里以后会放更完整的关于我：喜欢的音乐、游戏、书和偶尔冒出来的想法。<br>慢慢建设中，欢迎常来看看。</p>
 
         </div>
         
-        
-        <div class="friend-links">
+        <div class="icon-links">
             
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
-            </div>
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/foreverstyle">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="mailto:foreverstyle66@gmail.com">
+                    <i
+                        class="fa-solid fa-envelope fa-fw"
+                    ></i>
+                </a>
+            </span>
             
         </div>
+        
         
     </div>
 </div>
@@ -267,11 +417,11 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2026 Hexo
+            2022 - 2026 Style丶深情
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;John Doe
+            &commat;Style丶深情
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
@@ -290,7 +440,7 @@
         </transition>
         
     </div>
-    <script src="/js/main.js"></script>
+    <script src="/myblog/js/main.js"></script>
     
 </body>
 </html>

@@ -1,17 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | Hexo</title>
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
+    <title>Archives | Style丶深情</title>
+    <meta name="author" content="Style丶深情" />
+    <meta name="description" content="在这里写代码、生活、灵感和一些想留下来的瞬间。" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="icon" href="/myblog/images/profile-avatar.jpg" />
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -32,17 +32,17 @@
     rel="stylesheet"
     href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
 />
-<script src="/js/lib/highlight.js"></script>
+<script src="/myblog/js/lib/highlight.js"></script>
 
 
 
-<script src="/js/lib/preview.js"></script>
+<script src="/myblog/js/lib/preview.js"></script>
 
 
 
 
 
-<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/myblog/css/main.css" />
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
@@ -52,92 +52,120 @@
                 <div id="loading-circle">
                     <h2>LOADING</h2>
                     <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/images/loading.gif" />
+                    <img src="/myblog/images/loading.gif" />
                 </div>
             </div>
         </transition>
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
-        <a class="title" href="/">
-            <span>HEXO</span>
+        <a class="title" href="/myblog/">
+            <span>STYLE丶深情</span>
         </a>
         
-        <a href="/">
+        <a href="/myblog/">
             <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
+            <span>&ensp;首页</span>
         </a>
         
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
+        <a href="/myblog/archives">
+            <i class="fa-solid fa-rss fa-fw"></i>
+            <span>&ensp;归档</span>
         </a>
         
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
+        <a href="/myblog/music">
+            <i class="fa-solid fa-music fa-fw"></i>
+            <span>&ensp;音乐</span>
         </a>
         
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
+        <a href="/myblog/games">
+            <i class="fa-solid fa-gamepad fa-fw"></i>
+            <span>&ensp;游戏</span>
         </a>
         
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
+        <a href="/myblog/books">
+            <i class="fa-solid fa-book fa-fw"></i>
+            <span>&ensp;书籍</span>
+        </a>
+        
+        <a href="/myblog/other">
+            <i class="fa-solid fa-toolbox fa-fw"></i>
+            <span>&ensp;其他</span>
+        </a>
+        
+        <a href="mailto:foreverstyle66@gmail.com">
+            <i class="fa-solid fa-envelope fa-fw"></i>
+            <span>&ensp;联系</span>
         </a>
         
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;HEXO</span>
+            <span>&emsp;STYLE丶深情</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
                 
-                <a href="/">
+                <a href="/myblog/">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
                     </div>
                 </a>
                 
-                <a href="/about">
+                <a href="/myblog/archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-id-card fa-fw"></i>
+                            <i class="fa-solid fa-rss fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
                     </div>
                 </a>
                 
-                <a href="/archives">
+                <a href="/myblog/music">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                            <i class="fa-solid fa-music fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">音乐</div>
                     </div>
                 </a>
                 
-                <a href="/categories">
+                <a href="/myblog/games">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                            <i class="fa-solid fa-gamepad fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">游戏</div>
                     </div>
                 </a>
                 
-                <a href="/tags">
+                <a href="/myblog/books">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-tags fa-fw"></i>
+                            <i class="fa-solid fa-book fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">书籍</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog/other">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-toolbox fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">其他</div>
+                    </div>
+                </a>
+                
+                <a href="mailto:foreverstyle66@gmail.com">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-envelope fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">联系</div>
                     </div>
                 </a>
                 
@@ -155,15 +183,119 @@
     
     <div id="timeline-wrap" ref="timeline">
         
-        <div class="timeline" data-title="helloworld">
+        <div class="timeline" data-title="写在第一页">
             <div class="timeline-tail"></div>
             <div class="timeline-content">
                 <div class="item-time">2025/3/3</div>
-                <a href="/2025/03/03/hello-world/">
-                    <h3>Hello World</h3>
+                <a href="/myblog/2025/03/03/hello-world/">
+                    <h3>写在第一页</h3>
                 </a>
                 <div class="info">
                     
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="为何学习乐理？乐理之于听感">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2026/5/29</div>
+                <a href="/myblog/2026/05/29/why-learn-music-theory/">
+                    <h3>为何学习乐理？乐理之于听感</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/myblog/categories/%E9%9F%B3%E4%B9%90/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            音乐
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/myblog/tags/%E4%B9%90%E7%90%86/" style="color: #ffa2c4">
+                                乐理
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/myblog/tags/%E5%90%AC%E6%84%9F/" style="color: #ff7d73">
+                                听感
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/myblog/tags/%E9%9F%B3%E4%B9%90%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">
+                                音乐学习
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="ai当道下应该如何学习和思考">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2026/5/29</div>
+                <a href="/myblog/2026/05/29/how-to-learn-and-think-in-the-age-of-ai/">
+                    <h3>AI当道下应该如何学习和思考</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/myblog/categories/%E6%80%9D%E8%80%83/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            思考
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/myblog/tags/AI/" style="color: #03a9f4">
+                                AI
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/myblog/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="color: #00a596">
+                                学习方法
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/myblog/tags/%E6%80%9D%E8%80%83/" style="color: #00bcd4">
+                                思考
+                            </a>
+                        </span>
+                        
+                    </span>
                     
                 </div>
             </div>
@@ -176,11 +308,11 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2026 Hexo
+            2022 - 2026 Style丶深情
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;John Doe
+            &commat;Style丶深情
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
@@ -199,7 +331,7 @@
         </transition>
         
     </div>
-    <script src="/js/main.js"></script>
+    <script src="/myblog/js/main.js"></script>
     
 </body>
 </html>
